@@ -22,7 +22,69 @@
   </header>
 
   <main class="container my-5" id="project-main">
-    <p>Loading project...</p>
+    <!-- Static project listing (dummy entries) shown when no slug provided -->
+    <section class="projects-list">
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <article class="card project-card">
+            <a href="project.html?slug=alpha-studio" class="text-decoration-none text-dark">
+              <img src="assets/img/portfolio/images.jpg" class="card-img-top" alt="Alpha Studio screenshot">
+              <div class="card-body">
+                <h5 class="card-title">Alpha Studio</h5>
+                <p class="card-text">A responsive marketing site showcasing design and interactions.</p>
+              </div>
+            </a>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <article class="card project-card">
+            <a href="project.html?slug=flux-dashboard" class="text-decoration-none text-dark">
+              <img src="assets/img/portfolio/images (1).jpg" class="card-img-top" alt="Flux Dashboard screenshot">
+              <div class="card-body">
+                <h5 class="card-title">Flux Dashboard</h5>
+                <p class="card-text">A lightweight admin dashboard with charts and realtime updates.</p>
+              </div>
+            </a>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <article class="card project-card">
+            <a href="project.html?slug=marketplace-pro" class="text-decoration-none text-dark">
+              <img src="assets/img/portfolio/images (2).jpg" class="card-img-top" alt="Marketplace Pro screenshot">
+              <div class="card-body">
+                <h5 class="card-title">Marketplace Pro</h5>
+                <p class="card-text">An e-commerce prototype focusing on performance and accessibility.</p>
+              </div>
+            </a>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <article class="card project-card">
+            <a href="project.html?slug=red-giant-arcade" class="text-decoration-none text-dark">
+              <img src="assets/img/portfolio/images (3).jpg" class="card-img-top" alt="Red Giant Arcade screenshot">
+              <div class="card-body">
+                <h5 class="card-title">Red Giant Arcade</h5>
+                <p class="card-text">A playful collection of small HTML5 games and interactive experiments.</p>
+              </div>
+            </a>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <article class="card project-card">
+            <a href="project.html?slug=build-ur-future" class="text-decoration-none text-dark">
+              <img src="assets/img/portfolio/images (4).jpg" class="card-img-top" alt="Build Ur Future screenshot">
+              <div class="card-body">
+                <h5 class="card-title">Build Ur Future</h5>
+                <p class="card-text">Community-focused resource hub prototype for career growth and mentorship.</p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer py-4">
@@ -41,7 +103,7 @@
       if (slug && typeof window.NO_loadProjectDetail === 'function') {
         window.NO_loadProjectDetail(decodeURIComponent(slug));
       } else {
-        document.getElementById('project-main').innerHTML = '<h2>No project selected</h2><p>Please select a project from the <a href="portfolio.html">projects page</a>.</p>';
+        // No slug provided — keep the static project listing rendered in the HTML above.
       }
     });
   </script>
