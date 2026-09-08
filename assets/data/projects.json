@@ -1,32 +1,5 @@
 [
-  {
-    "title": "Alpha Studio",
-    "slug": "alpha-studio",
-    "description": "Responsive marketing site showcasing design and interactions.",
-    "problem": "Needed a lightweight landing experience for design clients.",
-    "solution": "Built a responsive, accessible single-page site with fast performance.",
-    "features": ["Responsive layout", "Accessible markup", "Smooth animations"],
-    "technologies": ["HTML", "CSS", "JavaScript"],
-    "image": "assets/img/portfolio/images.jpg",
-    "github": "",
-    "demo": "",
-    "category": "Marketing",
-    "featured": true
-  },
-  {
-    "title": "Flux Dashboard",
-    "slug": "flux-dashboard",
-    "description": "A lightweight admin dashboard with charts and realtime updates.",
-    "problem": "Prototype needed for internal analytics and quick decision making.",
-    "solution": "Implemented a modular dashboard with accessible widgets and charts.",
-    "features": ["Charts", "Realtime widgets", "Modular components"],
-    "technologies": ["HTML", "CSS", "JavaScript"],
-    "image": "assets/img/portfolio/images (1).jpg",
-    "github": "",
-    "demo": "",
-    "category": "Dashboard",
-    "featured": false
-  },
+  
   {
     "title": "Marketplace Pro",
     "slug": "marketplace-pro",
