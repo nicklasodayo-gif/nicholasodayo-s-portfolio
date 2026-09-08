@@ -1,0 +1,16 @@
+[
+  {
+    "title": "[ADD PROJECT TITLE]",
+    "slug": "add-project-slug",
+    "description": "[ADD SHORT DESCRIPTION]",
+    "problem": "[ADD PROBLEM STATEMENT]",
+    "solution": "[ADD SOLUTION SUMMARY]",
+    "features": ["[FEATURE 1]", "[FEATURE 2]"],
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "image": "assets/img/portfolio/images.jpg",
+    "github": "[ADD_GITHUB_URL]",
+    "demo": "[ADD_LIVE_URL]",
+    "category": "[ADD_CATEGORY]",
+    "featured": false
+  }
+]

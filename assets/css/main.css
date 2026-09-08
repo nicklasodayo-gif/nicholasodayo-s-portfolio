@@ -1,10 +1,8 @@
 /**
-* Template Name: FolioOne
-* Template URL: https://bootstrapmade.com/folioone-bootstrap-portfolio-website-template/
-* Updated: Aug 23 2025 with Bootstrap v5.3.7
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+ * Project: Portfolio — Nicholas Odayo
+ * Styles: Global design tokens and component styles
+ * Notes: Base vendor attributions remain in vendor files.
+ */
 
 /*--------------------------------------------------------------
 # Font & Color Variables
@@ -2852,4 +2850,16 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+/* Show Download CV only on large screens to keep mobile nav clean */
+.header .download-cv {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .header .download-cv {
+    display: inline-block;
+    margin-left: 0.5rem;
+  }
 }

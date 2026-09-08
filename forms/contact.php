@@ -7,12 +7,31 @@
   */
 
   // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+  // Updated to use the verified email present in the project files.
+  $receiving_email_address = 'nicklasodayo@gmail.com';
 
   if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
     include( $php_email_form );
   } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
+    // Fallback: attempt to send using PHP mail() if available. This may not be reliable on all hosts.
+    $name = isset($_POST['name']) ? strip_tags(trim($_POST['name'])) : '';
+    $email = isset($_POST['email']) ? filter_var(trim($_POST['email']), FILTER_VALIDATE_EMAIL) : false;
+    $subject = isset($_POST['subject']) ? strip_tags(trim($_POST['subject'])) : 'Website contact form';
+    $message = isset($_POST['message']) ? trim($_POST['message']) : '';
+
+    $body = "Name: {$name}\nEmail: {$email}\n\nMessage:\n{$message}";
+    $safe_from = $email ? $email : 'noreply@' . ($_SERVER['SERVER_NAME'] ?? 'localhost');
+    $headers = "From: {$name} <{$safe_from}>\r\n" .
+               "Reply-To: {$safe_from}\r\n" .
+               "Content-Type: text/plain; charset=UTF-8\r\n";
+
+    if (function_exists('mail') && mail($receiving_email_address, $subject, $body, $headers)) {
+      echo 'OK';
+    } else {
+      // Informational message for the developer / site owner
+      echo 'ERROR: Mailer not configured. Install the PHP Email Form library or configure SMTP on the server.';
+    }
+    exit;
   }
 
   $contact = new PHP_Email_Form;

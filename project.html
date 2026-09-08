@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project | Nicholas Odayo</title>
+  <meta name="description" content="Project case study">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container d-flex justify-content-between align-items-center py-3">
+      <a href="index.html" class="sitename">Nicholas Odayo</a>
+      <nav>
+        <a href="portfolio.html">Projects</a>
+        <a href="resume.html" class="ms-3">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container my-5" id="project-main">
+    <p>Loading project...</p>
+  </main>
+
+  <footer class="footer py-4">
+    <div class="container text-center">© <strong>Nicholas Odayo</strong></div>
+  </footer>
+
+  <script src="assets/js/projects.js" defer></script>
+  <script>
+    // Read slug parameter and request detail render after DOM/content is ready
+    document.addEventListener('DOMContentLoaded', function () {
+      function getParam(name){
+        const url = new URL(location.href);
+        return url.searchParams.get(name);
+      }
+      const slug = getParam('slug');
+      if (slug && typeof window.NO_loadProjectDetail === 'function') {
+        window.NO_loadProjectDetail(decodeURIComponent(slug));
+      } else {
+        document.getElementById('project-main').innerHTML = '<h2>No project selected</h2><p>Please select a project from the <a href="portfolio.html">projects page</a>.</p>';
+      }
+    });
+  </script>
+
+</body>
+</html>

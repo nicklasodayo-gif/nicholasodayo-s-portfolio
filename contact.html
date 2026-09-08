@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Contact - FolioOne Bootstrap Template</title>
-  <meta name="description" content="">
+  <title>Contact | Nicholas Odayo | Web Developer & Creative Technologist</title>
+  <meta name="description" content="Contact Nicholas Odayo — Web Developer & Creative Technologist. For project inquiries, freelance or internship opportunities, and collaborations.">
   <meta name="keywords" content="">
 
   <!-- Fonts -->
@@ -30,16 +30,16 @@
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
-      <!-- <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-      <img src="assets/img/logo.webp" alt="">
-      <h1 class="sitename">FolioOne</h1> 
-    </a> -->
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0" aria-label="Homepage">
+        <h1 class="sitename">Nicholas Odayo</h1>
+      </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="resume.html">Resume</a></li>
+          <li><a href="resume.html" class="download-cv">Download CV</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="contact.html" class="active">Contact</a></li>
@@ -74,16 +74,15 @@
           <div class="col-lg-5">
             <div class="info-box" data-aos="fade-up" data-aos-delay="200">
               <h3>Contact Info</h3>
-              <p>You can reach me through email, phone, or social media, and I’ll do my best to respond as soon as possible. I look forward to hearing from you and working together to create something impactful.</p>
+              <p>Only verified contact information is listed. For other channels or collaborations, please get in touch.</p>
 
               <div class="info-item" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-box">
                   <i class="bi bi-geo-alt"></i>
                 </div>
                 <div class="content">
-                  <h4>Our Location</h4>
-                  <p>A108 Jericho street</p>
-                  <p>Makadara Nairobi 535022</p>
+                  <h4>Location</h4>
+                  <p>[ADD YOUR LOCATION OR REMOVE]</p>
                 </div>
               </div>
 
@@ -93,8 +92,7 @@
                 </div>
                 <div class="content">
                   <h4>Phone Number</h4>
-                  <p>+254 746 867 743</p>
-                  <p>+254 733 934 570</p>
+                  <p>[ADD YOUR PHONE NUMBER]</p>
                 </div>
               </div>
 
@@ -104,7 +102,6 @@
                 </div>
                 <div class="content">
                   <h4>Email Address</h4>
-                  <p>beatriceajwang618@gmail.com</p>
                   <p>nicklasodayo@gmail.com</p>
                 </div>
               </div>
@@ -114,37 +111,62 @@
           <div class="col-lg-7">
             <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
               <h3>Get In Touch</h3>
-              <p>You can reach me through email, phone, or social media, and I’ll do my best to respond as soon as possible. I look forward to hearing from you and working together to create something impactful.</p>
+              <p>If you'd like to discuss a project, internship, or collaboration, fill out the form below or email me directly at <a href="mailto:nicklasodayo@gmail.com">nicklasodayo@gmail.com</a>.</p>
 
-              <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <form name="contact" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200" data-netlify="true" data-netlify-honeypot="bot-field" action="/contact.html?success=true">
+                <input type="hidden" name="form-name" value="contact">
+                <p style="display:none">
+                  <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+                </p>
+                <fieldset>
                 <div class="row gy-4">
 
                   <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                    <label for="contact-name" class="visually-hidden">Your Name</label>
+                    <input id="contact-name" type="text" name="name" class="form-control" placeholder="Your name" required aria-required="true">
                   </div>
 
                   <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                    <label for="contact-email" class="visually-hidden">Your Email</label>
+                    <input id="contact-email" type="email" class="form-control" name="email" placeholder="your@email.com" required aria-required="true">
                   </div>
 
                   <div class="col-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                    <label for="contact-subject" class="visually-hidden">Subject</label>
+                    <input id="contact-subject" type="text" class="form-control" name="subject" placeholder="Subject" required aria-required="true">
                   </div>
 
                   <div class="col-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                    <label for="contact-message" class="visually-hidden">Message</label>
+                    <textarea id="contact-message" class="form-control" name="message" rows="6" placeholder="Message" required aria-required="true"></textarea>
                   </div>
 
                   <div class="col-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                    <div class="loading" aria-hidden="true">Loading</div>
+                    <div class="error-message" role="alert" aria-live="assertive"></div>
+                    <div class="sent-message" role="status" aria-live="polite">Your message has been sent. Thank you!</div>
 
                     <button type="submit" class="btn">Send Message</button>
                   </div>
 
                 </div>
+                </fieldset>
               </form>
+
+              <script>
+                // Show success message if redirected with ?success=true
+                (function(){
+                  try {
+                    const params = new URLSearchParams(window.location.search);
+                    if (params.get('success') === 'true') {
+                      const sent = document.querySelector('.sent-message');
+                      if (sent) {
+                        sent.style.display = 'block';
+                      }
+                    }
+                  } catch (e) { /* ignore */ }
+                })();
+              </script>
 
             </div>
           </div>
@@ -161,7 +183,7 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">my Portfolio</strong> <span>All Rights Reserved<br></span></p> 
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Nicholas Odayo</strong> <span>All Rights Reserved<br></span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
         <a href=""><i class="bi bi-twitter-x"></i></a>
@@ -196,6 +218,54 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    // Contact form fallback: use Netlify native submit when on Netlify, otherwise POST to forms/contact.php via fetch
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.querySelector('form[name="contact"]');
+      if (!form) return;
+
+      const sentMsg = form.querySelector('.sent-message');
+      const errMsg = form.querySelector('.error-message');
+      const loading = form.querySelector('.loading');
+      if (sentMsg) sentMsg.style.display = 'none';
+      if (loading) loading.style.display = 'none';
+
+      form.addEventListener('submit', async function (e) {
+        const hostname = window.location.hostname || '';
+        // Allow Netlify native handling
+        if (hostname.includes('netlify')) {
+          return;
+        }
+
+        // Otherwise use AJAX POST to PHP fallback
+        e.preventDefault();
+        if (loading) loading.style.display = 'block';
+        if (errMsg) { errMsg.textContent = ''; errMsg.style.display = 'none'; }
+        if (sentMsg) sentMsg.style.display = 'none';
+
+        try {
+          const action = form.getAttribute('action') || 'forms/contact.php';
+          const formData = new FormData(form);
+          const resp = await fetch(action, {
+            method: 'POST',
+            body: formData
+          });
+          const text = await resp.text();
+          if (resp.ok && (text.trim() === 'OK' || text.trim().toUpperCase().startsWith('OK') || resp.status === 200)) {
+            if (sentMsg) sentMsg.style.display = 'block';
+            form.reset();
+          } else {
+            if (errMsg) { errMsg.textContent = text || 'Failed to send message.'; errMsg.style.display = 'block'; }
+          }
+        } catch (err) {
+          if (errMsg) { errMsg.textContent = 'Network error: ' + err.message; errMsg.style.display = 'block'; }
+        } finally {
+          if (loading) loading.style.display = 'none';
+        }
+      });
+    });
+  </script>
 
 </body>
 
