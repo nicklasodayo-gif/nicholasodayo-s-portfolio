@@ -16,7 +16,7 @@
   }
 ,
   {
-    "title": "Red Giant Arcade",
+    "title": "Red Giant Arcade — Play. Compete. Connect.",
     "slug": "red-giant-arcade",
     "description": "A playful browser arcade experience showcasing interactive games and animations.",
     "problem": "Needed a small, performant playground to host HTML5 mini-games.",
@@ -30,7 +30,7 @@
     "featured": false
   },
   {
-    "title": "Build Ur Future",
+    "title": "Build Your Future",
     "slug": "build-ur-future",
     "description": "A community-focused platform prototype for learning and career resources.",
     "problem": "There was a need for a simple resource hub for learners and mentors.",
@@ -39,7 +39,7 @@
     "technologies": ["HTML", "CSS", "JavaScript"],
     "image": "assets/img/portfolio/images (4).jpg",
     "github": "",
-    "demo": "https://build-ur-future-9.onrender.com/",
+    "demo": "https://build-ur-future-2-0-1.onrender.com/",
     "category": "Community",
     "featured": false
   }
